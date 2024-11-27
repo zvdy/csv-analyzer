@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CSV Analyzer Web Application
 
-## Getting Started
+This project is a web-based CSV analyzer built with **Next.js**, **React**, and **Tailwind CSS**. The application allows users to upload a CSV file, filter the data based on specified search terms, and export the filtered data to a new CSV file.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **CSV File Upload**: Upload CSV files and parse the data.
+- **Filters**: Add filters to search specific columns for values.
+- **Export**: Export the filtered data as a new CSV file.
+- **Responsive**: The app is fully responsive and works well on mobile devices.
+- **Custom Styling**: Tailwind CSS is used for styling with a custom color palette.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js** (React framework for server-side rendering and routing)
+- **Tailwind CSS** (Utility-first CSS framework)
+- **PapaParse** (CSV parsing library)
+- **TypeScript** (Static type-checking)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js (preferably LTS version)
+- Yarn package manager (You can also use npm, but yarn is recommended for this project)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Steps to Install
 
-## Deploy on Vercel
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/zvdy/csv-analyzer
+   cd csv-analyzer
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install dependencies**
+    ```bash
+    yarn install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. ** Run the application**
+
+    ```bash
+    yarn dev
+    ```
+
+    This will start the Next.js development server at `http://localhost:3000`
+
+## File Structure
+
+The main files and folders in the project are:
+
+    - src/app/components/CsvReader.tsx: The main component that handles CSV uploading, filtering, and exporting.
+    - src/globals.css: Global CSS styles.
+    - tailwind.config.js: Tailwind CSS configuration.
+    - next.config.ts: Next.js configuration.
+    - package.json: Contains project dependencies and scripts.
+    - yarn.lock: Ensures that all dependencies are installed with the same versions.
+
+### Custom Color Palette
+
+This project uses the following custom color palette for the design:
+
+    - #1f2335
+    - #24283b
+    - #292e42
+    - #3b4261
+    - #414868
+    - #545c7e
+    - #565f89
+    - #737aa2
+
+They are based on `Tokyo Night` color theme.
+
+## Usage
+
+Upload a CSV file by clicking the "Browse..." button.
+Apply filters by selecting the column and entering a search term.
+Export the filtered data by clicking "Export Filtered Data" to download a new CSV file with the filtered results.
+
+## Contributing
+
+Feel free to fork this repository and submit pull requests with improvements, fixes, or features. Please ensure that your changes are well-tested and documented.
+License
+
+## License
+This project is open-source and available under the MIT License.
