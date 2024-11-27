@@ -69,10 +69,10 @@ const CsvReader: React.FC = () => {
           className="file-input"
         />
         <button
-          onClick={() => document.querySelector('.file-input')?.click()}
+          onClick={() => (document.querySelector('.file-input') as HTMLInputElement)?.click()}
           className="custom-file-btn"
         >
-          Browse...
+          Upload File
         </button>
       </div>
 
@@ -117,8 +117,8 @@ const CsvReader: React.FC = () => {
       </div>
 
       {/* Scrollable table container */}
-      <div className="table-container">
-        <table className="min-w-full bg-dark2 border border-dark4 rounded-lg overflow-hidden">
+      <div className="overflow-x-auto mb-4">
+        <table className="bg-dark2 border border-dark4 rounded-lg min-w-full">
           <thead>
             <tr>
               {data.length > 0 &&
