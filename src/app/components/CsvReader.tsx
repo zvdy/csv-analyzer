@@ -19,6 +19,7 @@ const CsvReader: React.FC = () => {
         header: true,
         complete: (results: Papa.ParseResult<any>) => {
           setData(results.data);
+          setFilters([{ header: '', searchTerm: '' }]); // Reset filters
         },
       });
     }
